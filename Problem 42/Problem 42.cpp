@@ -62,4 +62,3 @@ int main()
 in the array and return the number of the count. it does this by filling the array with random numbers first
 using FillArrayWithRandomNumbers and then it sends that array with the length to a function called 
 Odd NumberCountInArray. then it checks every element if it's odd or even, if it's odd it adds 1 to the counter
-and loops until the end*/
