@@ -1,16 +1,6 @@
 #include <iostream>
 #include <cstdlib>
 
-int ReadNumber()
-{
-	int Number;
-
-	std::cout << "Enter a number: ";
-	std::cin >> Number;
-
-	return Number;
-}
-
 void FillArray(int arr[100], int &arrLength)
 {
 	arrLength = 10;
