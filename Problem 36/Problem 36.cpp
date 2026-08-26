@@ -1,34 +1,19 @@
-#include<iostream>
-#include<cstdlib>
-
-void AddArrayNumber(int Number, int arr[100], int& length)
-{
-	length++;
-	arr[length - 1] = Number;
-}
+#include <iostream>
+#include <cstdlib>
 
 int ReadNumber()
 {
-	int Number;
+	int Num;
+	std::cout << "enter a number: ";
+	std::cin >> Num;
 
-	std::cout << "Enter a number: ";
-	std::cin >> Number;
-
-	return Number;
+	return Num;
 }
-void GetUserInput(int arr[100], int &length)
+
+void FillElementsInArray(int Num, int arr[100], int &ArrLength)
 {
-	bool AddMore{ true };
-
-	do
-	{
-		AddArrayNumber(ReadNumber(), arr, length);
-
-		std::cout << "Do you want to add another Number? [0] No, [1] Yes: ";
-		std::cin >> AddMore;
-
-	} while (AddMore);
-
+	ArrLength++;
+	arr[ArrLength - 1] = Num;
 }
 
 void PrintArray(int Length, int arr[100])
@@ -39,18 +24,27 @@ void PrintArray(int Length, int arr[100])
 	}
 }
 
-
+void GetUserInputInArray(int arr[100], int &ArrLength)
+{
+	bool AddNumber = true;
+	do
+	{
+		FillElementsInArray(ReadNumber(), arr, ArrLength);
+		std::cout << "Do you want to add an element to this array? [0]: No [1]: Yes: ";
+		std::cin >> AddNumber;
+	} while (AddNumber == true);
+}
 int main()
 {
-	int arr[100];
-	int length{0};
+	int Arr[100];
+	int ArrLength = 0;
 
-	GetUserInput(arr, length);
+	GetUserInputInArray(Arr, ArrLength);
 
-	std::cout << "\nArray length: " << length << '\n';
-	std::cout << "Array elements: ";
+	std::cout << "\nArray length: " << ArrLength;
 
-	PrintArray(length, arr);
+	std::cout << "\nArray Elements: ";
+	PrintArray(ArrLength, Arr);
 
 	return 0;
 }

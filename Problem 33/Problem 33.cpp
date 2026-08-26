@@ -77,7 +77,7 @@ std::string MakeKey()
 	return Key;
 
 }
-void FillArrayWithKeys(int length , std::string arr[100])
+void FillArrayWithKeys(int length, std::string arr[100])
 {
 	for (int i{ 0 }; i < length; i++)
 	{

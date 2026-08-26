@@ -15,7 +15,7 @@ int ReadPositiveNumber(std::string Message)
 	{
 		std::cout << Message;
 		std::cin >> Num;
-	} while (Num <= 0 || Num > 100);
+	} while (Num <= 0 || Num>100);
 
 	return Num;
 }
@@ -32,7 +32,7 @@ void PrintArray(int Length, int arr[100])
 {
 	for (int i{ 0 }; i < Length; i++)
 	{
-		std::cout << arr[i] << " ";
+		std::cout << arr[i]<< " ";
 	}
 	std::cout << '\n';
 }
@@ -60,7 +60,7 @@ int main()
 	int length;
 	int MaxNumberinArray;
 
-	length = ReadPositiveNumber("Enter the length of the array (100 max): ");
+	length =ReadPositiveNumber("Enter the length of the array (100 max): ");
 
 	FillArrayWithRandomNumbers(arr, length);
 
@@ -69,8 +69,8 @@ int main()
 	PrintArray(length, arr);
 
 	MaxNumberinArray = FindMaxNumberinArray(arr, length);
-	std::cout << "\nThe biggest number in your array is: " << MaxNumberinArray << '\n';
-
+	std::cout << "\nThe biggest number in your array is: " << MaxNumberinArray<<'\n';
+	
 
 	return 0;
 }
