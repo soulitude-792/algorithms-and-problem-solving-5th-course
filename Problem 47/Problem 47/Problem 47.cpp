@@ -3,7 +3,7 @@
 
 float GetFractionPart(float Number)
 {
-	return (int(Number) - Number);
+	return (Number - (int)Number);
 }
 
 int MyRound(float Number)
